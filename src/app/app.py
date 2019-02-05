@@ -1,10 +1,16 @@
-from flask import Flask
-application = Flask("memefy_api")
+from flask import Flask, request, send_from_directory, redirect
+application = Flask("rsa_app")
 
 
 @application.route("/")
-def hello():
-    return "<h1 style='color:blue'>Hello There!</h1>"
+def index():
+    return redirect("/index.html")
+
+
+@application.route("/<path:path>")
+def main(path):
+
+    return send_from_directory("static", path)
 
 
 if __name__ == "__main__":
