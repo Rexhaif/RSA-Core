@@ -1,8 +1,10 @@
 FROM python:alpine3.7
 
 RUN apk add --no-cache bash
-RUN pip3 install flask
-RUN pip3 install gunicorn
+
+ADD ./requirements.txt /requirements.txt
+
+RUN pip3 install -r /requirements.txt
 
 ADD ./src /app
 

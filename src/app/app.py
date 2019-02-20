@@ -4,7 +4,7 @@ application = Flask("rsa-core")
 
 @application.route("/")
 def index():
-    return jsonify({"msg":"ok"})
+    return jsonify({"msg": "ok"})
 
 
 if __name__ == "__main__":
