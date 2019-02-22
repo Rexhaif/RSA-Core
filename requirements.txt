@@ -1,2 +1,4 @@
+werkzeug
 flask
 gunicorn
+flask-jwt-extended
